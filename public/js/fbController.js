@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngSocial.facebook', ['ngRoute','ngFacebook'])
+angular.module('ngSocial.facebook', ['ngRoute','ngFacebook','ngMap'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/facebook', {
@@ -30,11 +30,8 @@ angular.module('ngSocial.facebook', ['ngRoute','ngFacebook'])
    }(document, 'script', 'facebook-jssdk'));
 })
 
-// .service('distCalculator', function(loc1, loc2, options) {
-// 	return geodist(loc1, loc2, options);
-// })
 
-.controller('FacebookCtrl', ['$scope', '$facebook', 'geodist', function($scope, $facebook, geodist) {
+.controller('FacebookCtrl', ['$scope', '$facebook', 'geodist', 'ngMap', function($scope, $facebook, geodist, ngMap) {
 	$scope.isLoggedIn = false;
 
 	$scope.login = function(){
@@ -148,5 +145,3 @@ angular.module('ngSocial.facebook', ['ngRoute','ngFacebook'])
 		});
 	}
 }]);
-
-// https://stackoverflow.com/questions/14968297/use-underscore-inside-angular-controllers/23984685#23984685
