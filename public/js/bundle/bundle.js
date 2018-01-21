@@ -53289,7 +53289,6 @@ var ngFacebook = require('ng-facebook');
 var ngMap = require('ngmap');
 var geodist = require('geodist');
 var geolib = require('geolib');
-// global.geodist = require('geodist');
 window.geodist = require('geodist');
 global.jQuery = require('jquery');
 var bootstrap = require('bootstrap');

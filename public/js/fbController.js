@@ -31,8 +31,14 @@ angular.module('ngSocial.facebook', ['ngRoute','ngFacebook','ngMap'])
 })
 
 
-.controller('FacebookCtrl', ['$scope', '$facebook', 'geodist', 'ngMap', function($scope, $facebook, geodist, ngMap) {
+.controller('FacebookCtrl', ['$scope', '$facebook', 'geodist', 'NgMap', function($scope, $facebook, geodist, ngMap) {
 	$scope.isLoggedIn = false;
+
+	$scope.googleMapsUrl="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUcL04VUEd36eULLUSpuG1itU1fOyu5Aw";
+
+	$scope.callGmapApi = function(locArray) {
+
+	}
 
 	$scope.login = function(){
 		$facebook.login().then(function(){

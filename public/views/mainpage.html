@@ -59,8 +59,11 @@
               </div> 
           </div> -->
 
-            <div id="gmap">
-              
+            <div id="googlemap">
+              <div map-lazy-load="https://maps.google.com/maps/api/js"
+                map-lazy-load-params="{{googleMapsUrl}}">
+                <ng-map center="41,-87" zoom="3"></ng-map>
+              </div>
             </div>
             <h2> My Tagged Places </h2>
             <div ng-repeat="place in places" class="stbody">
